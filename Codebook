@@ -8,14 +8,122 @@ Source: Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. R
 PRIMARY DATA
 The primary data of the experiments have been downloaded from the https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip .  
 
-PROCESSING OF PRIMARY DATA
-The primary set of data includes observations on a test sample and training sample. The two samples have been combined in one sample. Only the variables refering to means and standard deviations of the observations have been retained. 
-DATA
+PROCESSING OF THE PRIMARY DATA
+The primary set of data includes observations on a test sample and training sample. The two samples have been combined in one sample. Only the variables refering to means and standard deviations of the observations have been retained. The observations have been grouped by subject and by type of activity. For each group the averages have been calculated. This independent set of secondary data has been saved as tidydata.txt file.
+
+VARIABLES AND VARIABLES IDENTIFIERS
 The data comes from the tidydata.txt file.
 The data is organized according to tidy data principles.
 The first row includes names of the variables.
-The data includes observations for 30 subjects studied under 6 types of activities
+The data includes observations for 30 subjects studied under 6 types of activities.
+Measurements refer to two domains for signals: Time Domain and Frequency Domain
 
-VARIABLES
-Subject - identifier of the studied subject, integer, with values from 1 to 30
-Activity - factor with 6 levels: "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING" 
+"Subject" - identifier of the studied subject, integer, with values from 1 to 30
+"Activity" - factor with 6 levels: "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING" 
+
+Time domain measurements:
+Body Acceleration Mean in three spacial dimensions (X,Y,Z)
+"TimeDomainBodyAccelerometerMeanX"                           
+"TimeDomainBodyAccelerometerMeanY"                          
+"TimeDomainBodyAccelerometerMeanZ"
+Body Acceleration Standard Deviations in three spacial dimensions (X,Y,Z)
+"TimeDomainBodyAccelerometerStdDevX"                        
+"TimeDomainBodyAccelerometerStdDevY"
+"TimeDomainBodyAccelerometerStdDevZ" 
+Gravitational Acceleration Mean in three spacial dimensions (X,Y,Z)
+"TimeDomainGravityAccelerometerMeanX"                           
+"TimeDomainGravityAccelerometerMeanY"                          
+"TimeDomainGravityAccelerometerMeanZ"
+Gravitational Acceleration Standard Deviations in three spacial dimensions (X,Y,Z)
+"TimeDomainGravityAccelerometerStdDevX"                        
+"TimeDomainGravityAccelerometerStdDevY"
+"TimeDomainGravityAccelerometerStdDevZ" 
+Body Jerk Acceleration Mean Deviations in three three spacial dimensions (X,Y,Z)
+"TimeDomainBodyAccelerometerJerkMeanX"
+"TimeDomainBodyAccelerometerJerkMeanY"                      
+"TimeDomainBodyAccelerometerJerkMeanZ"
+Body Jerk Acceleration Standard Deviations in three three spacial dimensions (X,Y,Z)
+"TimeDomainBodyAccelerometerJerkStdDevX"                    
+"TimeDomainBodyAccelerometerJerkStdDevY"
+"TimeDomainBodyAccelerometerJerkStdDevZ" 
+Body Angular Speed Mean in three spacial dimensions (X,Y,Z)
+"TimeDomainBodyGyroscopeMeanX"
+"TimeDomainBodyGyroscopeMeanY"                              
+"TimeDomainBodyGyroscopeMeanZ"
+Body Angular Speed Standard Deviations in three spacial dimensions (X,Y,Z)
+"TimeDomainBodyGyroscopeStdDevX"                            
+"TimeDomainBodyGyroscopeStdDevY"
+"TimeDomainBodyGyroscopeStdDevZ"
+Mean and Standard Deviation of the magnitude of body acceleration
+"TimeDomainBodyAccelerometerMagnitudeMean"
+"TimeDomainBodyAccelerometerMagnitudeStdDev" 
+Mean and Standard Deviation of the magnitude of gravity acceleration               
+"TimeDomainGravityAccelerometerMagnitudeMean"
+"TimeDomainGravityAccelerometerMagnitudeStdDev" 
+Body Jerk Acceleration Mean and Standard Deviation of the magnitude            
+"TimeDomainBodyAccelerometerJerkMagnitudeMean"
+"TimeDomainBodyAccelerometerJerkMagnitudeStdDev" 
+Body Angular Speed Mean and Standard Deviation of the magnitude              
+"TimeDomainBodyGyroscopeMagnitudeMean"
+"TimeDomainBodyGyroscopeMagnitudeStdDev" 
+Body Angular Jerk Acceleration Mean and Standard Deviation of the magnitude                    
+"TimeDomainBodyGyroscopeJerkMagnitudeMean"
+"TimeDomainBodyGyroscopeJerkMagnitudeStdDev" 
+
+Frequency Domain measurements:
+Body Accelerations Means in three spacial directions (X,Y,Z)
+"FrequencyDomainBodyAccelerometerMeanX"
+"FrequencyDomainBodyAccelerometerMeanY"                     
+"FrequencyDomainBodyAccelerometerMeanZ"
+Body Accelerations Standard Deviations in three spacial directions (X,Y,Z)
+"FrequencyDomainBodyAccelerometerStdDevX"                   
+"FrequencyDomainBodyAccelerometerStdDevY"
+"FrequencyDomainBodyAccelerometerStdDevZ"
+Weighted Averages of the Body Acceleration Means in three spacial directions (X,Y,Z)
+"FrequencyDomainBodyAccelerometerMeanFrequencyX"
+"FrequencyDomainBodyAccelerometerMeanFrequencyY"            
+"FrequencyDomainBodyAccelerometerMeanFrequencyZ"
+Body Jerk Acceleration Means in three spacial directions (X,Y,Z)
+"FrequencyDomainBodyAccelerometerJerkMeanX"                 
+"FrequencyDomainBodyAccelerometerJerkMeanY"
+"FrequencyDomainBodyAccelerometerJerkMeanZ" 
+Body Jerk Acceleration Standard Deviations in three spacial directions (X,Y,Z)                
+"FrequencyDomainBodyAccelerometerJerkStdDevX"
+"FrequencyDomainBodyAccelerometerJerkStdDevY"               
+"FrequencyDomainBodyAccelerometerJerkStdDevZ"
+Weighted Averages of the Body Jerk Acceleration Means in three spacial directions (X,Y,Z)
+"FrequencyDomainBodyAccelerometerJerkMeanFrequencyX"        
+"FrequencyDomainBodyAccelerometerJerkMeanFrequencyY" 
+"FrequencyDomainBodyAccelerometerJerkMeanFrequencyZ"
+Body Angular Speed Means in three spacial directions (X,Y,Z)
+"FrequencyDomainBodyGyroscopeMeanX" 
+"FrequencyDomainBodyGyroscopeMeanY"                         
+"FrequencyDomainBodyGyroscopeMeanZ"
+Body Angular Speed Standard Deviations in three spacial directions (X,Y,Z)
+"FrequencyDomainBodyGyroscopeStdDevX"                       
+"FrequencyDomainBodyGyroscopeStdDevY"
+"FrequencyDomainBodyGyroscopeStdDevZ"  
+Weighted Averages of the Body Angular Speed Means in three spacial directions (X,Y,Z)                     
+"FrequencyDomainBodyGyroscopeMeanFrequencyX"
+"FrequencyDomainBodyGyroscopeMeanFrequencyY"                
+"FrequencyDomainBodyGyroscopeMeanFrequencyZ"
+Body Acceleration Mean and Standard Deviations of the magnitude
+"FrequencyDomainBodyAccelerometerMagnitudeMean"             
+"FrequencyDomainBodyAccelerometerMagnitudeStdDev"
+Weighted Averages of the Body Acceleration Mean and Standard Deviations of the magnitude
+"FrequencyDomainBodyAccelerometerMagnitudeMeanFrequency" 
+Body Jerk Acceleration Mean and Standard Deviation of the magnitude   
+"FrequencyDomainBodyAccelerometerJerkMagnitudeMean"
+"FrequencyDomainBodyAccelerometerJerkMagnitudeStdDev" 
+Weighted Average of the Body Acceleration Mean of the magnitude       
+"FrequencyDomainBodyAccelerometerJerkMagnitudeMeanFrequency" 
+Body Angular Speed Mean and Standard Deviation of the mgnitude
+"FrequencyDomainBodyGyroscopeMagnitudeMean"                 
+"FrequencyDomainBodyGyroscopeMagnitudeStdDev" 
+Weighted Average of the Body Angular Speed Mean of the magnitude
+"FrequencyDomainBodyGyroscopeMagnitudeMeanFrequency"
+Body Angular Jerk Acceleartion Mean and Standard Deviation of the maagnitude        
+"FrequencyDomainBodyGyroscopeJerkMagnitudeMean"              
+"FrequencyDomainBodyGyroscopeJerkMagnitudeStdDev"           
+Weighted Average of the Body Angular Jerk Acceleration Mean of the magnitude
+"FrequencyDomainBodyGyroscopeJerkMagnitudeMeanFrequency" 
