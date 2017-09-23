@@ -45,7 +45,7 @@ colnames(combset) <- gsub("Freq", "Frequency", colnames(combset))
 colnames(combset) <- gsub("mean", "Mean", colnames(combset))
 colnames(combset) <- gsub("std", "StdDev", colnames(combset))
 
-# creatin a secondary tidy data set with the average of each variable for each activity and each subject
+# creating a secondary tidy data set with the average of each variable for each activity and each subject
 library(dplyr)
 combset_averages<-combset%>%group_by(Subject,Activity)%>%summarize_all(funs(mean))
 
